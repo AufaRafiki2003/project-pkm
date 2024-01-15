@@ -46,7 +46,7 @@
                     <tbody class="bg-gray-200">
                         @forelse($calegs as $caleg)
                             <tr class="border bg-white">
-                                <td class="px-16 py-2">{{ $caleg->id_partai }}</td>
+                                <td class="px-16 py-2">{{ $caleg->partais->nama_partai }}</td>
                                 <td class="px-16 py-2">{{ $caleg->nama_caleg }}</td>
                                 <td class="px-16 py-2">{{ $caleg->no_urut_caleg }}</td>
                                 <td class="px-16 py-2">{{ $caleg->dapils->nama_dapil }}</td>

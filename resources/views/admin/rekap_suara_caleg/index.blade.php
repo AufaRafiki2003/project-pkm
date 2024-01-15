@@ -26,7 +26,7 @@
                         <tr class="bg-gray-600 w-full">
 
                             <th class="px-16 py-2">
-                                <span class="text-white">ID CALEG</span>
+                                <span class="text-white">CALEG</span>
                             </th>
                             <th class="px-16 py-2">
                                 <span class="text-white">PARTAI</span>
@@ -50,6 +50,7 @@
                             <td class="px-16 py-2">{{ $rekap_suara_caleg->calegs->partais->nama_partai }}</td>
                             <td class="px-16 py-2">{{ $rekap_suara_caleg->tpsuaras->no_tps }}</td>
                             <td class="px-16 py-2">{{ $rekap_suara_caleg->jumlah }}</td>
+                            
 
                             <!--action untuk tombol hapus dan edit belum ditambahkan -->
                             <td class="px-10 py-2 text-center">
