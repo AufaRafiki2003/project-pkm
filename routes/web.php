@@ -37,24 +37,11 @@ Route::middleware(['auth'])->group(function(){ // untuk bagian yang telah login
     
     Route::get('/logout', [SesiController::class, 'logout']); //untuk log out
 
-    Route::resource('/dapil', DapilController::class, ['as'=>'admin'])->middleware('userAkses:admin');
-
     Route::resource('/kecamatan', KecamatanController::class, ['as'=>'admin'])->middleware('userAkses:admin');
 
     Route::resource('/kelurahan', KelurahanController::class, ['as'=>'admin'])->middleware('userAkses:admin');
 
-    Route::resource('/tpsuara', TpsuaraController::class, ['as'=>'admin'])->middleware('userAkses:admin');
-
-    Route::resource('/partai', PartaiController::class, ['as'=>'admin'])->middleware('userAkses:admin');
-
-    Route::resource('/caleg', CalegController::class, ['as'=>'admin'])->middleware('userAkses:admin');
-
-    Route::resource('/rekap_suara_caleg', RscController::class, ['as'=>'admin'])->middleware('userAkses:saksi');
-
-    Route::resource('/rekap_suara_partai', RekapsuarapartaiController::class, ['as'=>'admin'])->middleware('userAkses:saksi');
-
-    Route::resource('/laporan', LaporanController::class, ['as'=>'admin']);
-    
+   
 });
 
 

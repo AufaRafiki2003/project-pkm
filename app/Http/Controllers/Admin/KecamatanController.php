@@ -18,12 +18,7 @@ class KecamatanController extends Controller
     }
 
     // Menampilkan form untuk membuat kecamatan baru
-    public function create()
-    {
-        $dapils = Dapil::all();
 
-        return view('admin.kecamatan.create', compact('dapils'));
-    }
 
     // Menyimpan data kecamatan baru
     public function store(Request $request)
@@ -47,15 +42,7 @@ class KecamatanController extends Controller
         
     }
 
-    // Menampilkan form untuk mengedit kecamatan
-    public function edit(Kecamatan $kecamatan)
-    {
-        $kecamatan = Kecamatan::findOrFail($kecamatan->id_kec);
-        $dapils = Dapil::all();
 
-        return view('admin.kecamatan.edit', compact('kecamatan', 'dapils'));
-
-    }
 
     // Menyimpan data kecamatan yang sudah diubah
     public function update(Request $request, Kecamatan $kecamatan)

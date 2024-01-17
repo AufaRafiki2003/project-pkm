@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dapils', function (Blueprint $table) {
-            $table->id('id_dapil');
-            $table->string('nama_dapil');
+        Schema::create('tbl_mahasiswas', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dapils');
+        Schema::dropIfExists('tbl_mahasiswas');
     }
 };
