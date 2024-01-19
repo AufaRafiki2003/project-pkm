@@ -37,7 +37,6 @@ Route::middleware(['auth'])->group(function(){ // untuk bagian yang telah login
     
     Route::get('/logout', [SesiController::class, 'logout']); //untuk log out
 
-    Route::resource('/mahasiswa', MahasiswaController::class, ['as'=>'admin'])->middleware('userAkses:admin');
 
    
 });
