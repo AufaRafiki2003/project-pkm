@@ -66,11 +66,11 @@
 
                     </tbody>
                 </table>
-                @if ($banks->hasPages())
+                {{-- @if ($banks->hasPages())
                 <div class="bg-white p-3">
                     {{ $banks->links('vendor.pagination.tailwind') }}
                 </div>
-                @endif
+                @endif --}}
             </div>
         </div>
     </div>

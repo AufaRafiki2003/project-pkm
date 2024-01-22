@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 class BankController extends Controller
 {
     public function index(){
-        $banks = tbl_bank::latest()->when(request()->q, function($banks){
-            $banks = $banks->where ("nama", "like", "%". request()->q ."%");
-       })->paginate(10);
+        $banks = tbl_bank::all();
        return view("admin.bank.index", compact("banks"));
     }
 }
