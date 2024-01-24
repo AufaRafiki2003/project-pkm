@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\CalegController;
 use App\Http\Controllers\Admin\PartaiController;
 use App\Http\Controllers\Admin\LaporanController;
 use App\Http\Controllers\Admin\MahasiswaController;
+use App\Http\Controllers\Admin\SuratCutiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,6 +39,7 @@ Route::middleware(['auth'])->group(function(){ // untuk bagian yang telah login
     Route::get('/logout', [SesiController::class, 'logout']); //untuk log out
 
     Route::resource('/bank', BankController::class, ['as'=>'admin']);
+    Route::resource('/SuratCuti', SuratCutiController::class, ['as'=>'admin']);
 
    
 });
